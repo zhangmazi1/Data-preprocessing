@@ -8,7 +8,7 @@ import scipy.interpolate as spi
 
 inputfile='work.xlsx'   #输入文件路径
 #插值过程，采用样条插值，可有效避免拉格朗日插值出现的龙格现象。
-missingData = pd.read_excel(inputfile,sheetname=1,header=None)   #将excel中数据读到dataframe
+missingData = pd.read_excel(inputfile,sheetname=0,header=None)   #将excel中数据读到dataframe，sheetname为sheet标号
 row=list(missingData.index)
 row=row[2:len(row)]    #从第二行开始寻找缺省值
 newrow=[]
